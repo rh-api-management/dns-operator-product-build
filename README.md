@@ -1,2 +1,2 @@
 # dns-operator-product-build
-Konfux migration build for DNS Operator
+Konfux configuration for the DNS Operator Product Build
