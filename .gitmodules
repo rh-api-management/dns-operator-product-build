@@ -1,0 +1,4 @@
+[submodule "dns-operator"]
+	path = dns-operator
+	url = https://github.com/kuadrant/dns-operator
+	branch = main
