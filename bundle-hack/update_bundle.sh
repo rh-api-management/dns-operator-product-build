@@ -1,13 +1,13 @@
 #!/usr/bin/env bash
 
-export DNS_OPERATOR_IMAGE_PULLSPEC="quay.io/redhat-user-workloads/api-management-tenant/rhcl-dns-operator@sha256:136462fc03ceafe6408084f271f57404b75d5d0f8df03780e1e17f6781c94b0b"
+export DNS_OPERATOR_PULLSPEC="registry.redhat.io/rhcl-1/dns-rhel9-operator"
 export CSV_FILE=/manifests/dns-operator.clusterserviceversion.yaml
 
 export DESCRIPTION=$(cat DESCRIPTION)
 
 export ICON=$(cat ICON)
 
-sed -i -e "s|quay.io/kuadrant/dns-operator:.*|\"${DNS_OPERATOR_IMAGE_PULLSPEC}\"|g" \
+sed -i -e "s|quay.io/redhat-user-workloads/api-management-tenant/rhcl-1-1-authorino-operator|\"${DNS_OPERATOR_IMAGE_PULLSPEC}\"|g" \
 	"${CSV_FILE}"
 
 export EPOC_TIMESTAMP=$(date +%s)
