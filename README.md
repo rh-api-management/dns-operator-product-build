@@ -1,2 +1,2 @@
 # DNS Operator Product Build
-Konflux build configuration for the DNS Operator Product
+Konflux build configuration for the DNS Operator component.
