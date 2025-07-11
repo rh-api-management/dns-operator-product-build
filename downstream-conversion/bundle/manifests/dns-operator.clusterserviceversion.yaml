@@ -57,7 +57,7 @@ metadata:
       ]
     capabilities: Basic Install
     categories: Integration & Delivery
-    containerImage: quay.io/redhat-user-workloads/api-management-tenant/rhcl-1-1-dns-operator@sha256:c5d738de0343cf8802ff9b518e3b1b0978e853874a3739f8611d4b281e8827aa 
+    containerImage: quay.io/redhat-user-workloads/api-management-tenant/rhcl-1-1-dns-operator@sha256:044fee8d6a27fed75eee89e036d7675695cbd40f68b77c510694d801d868dddf 
     createdAt: "2025-01-21T22:21:25Z"
     description: A Kubernetes Operator to manage the lifecycle of DNS resources
     operators.operatorframework.io/builder: operator-sdk-v1.33.0
@@ -182,7 +182,7 @@ spec:
                 - /manager
                 env:
                 - name: WATCH_NAMESPACES
-                image: quay.io/redhat-user-workloads/api-management-tenant/rhcl-1-1-dns-operator@sha256:c5d738de0343cf8802ff9b518e3b1b0978e853874a3739f8611d4b281e8827aa 
+                image: quay.io/redhat-user-workloads/api-management-tenant/rhcl-1-1-dns-operator@sha256:044fee8d6a27fed75eee89e036d7675695cbd40f68b77c510694d801d868dddf 
                 livenessProbe:
                   httpGet:
                     path: /healthz
