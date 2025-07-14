@@ -1,14 +1,27 @@
 #!/usr/bin/env bash
 
 export DNS_OPERATOR_PULLSPEC="registry.redhat.io/rhcl-1/dns-rhel9-operator"
+export DNS_OPERATOR_PULLSPEC_STAGE="registry.stage.redhat.io/rhcl-1/dns-rhel9-operator"
 export CSV_FILE=/manifests/dns-operator.clusterserviceversion.yaml
 
 export DESCRIPTION=$(cat DESCRIPTION)
 
 export ICON=$(cat ICON)
 
-sed -i -e "s|quay.io/redhat-user-workloads/api-management-tenant/rhcl-1-1-authorino-operator|\"${DNS_OPERATOR_IMAGE_PULLSPEC}\"|g" \
-	"${CSV_FILE}"
+##Update the konflux quay repos to registry.redhat.io or registry.stage.redhat.io, we have to do this manually before release, since Konflux does not pin them for us like OSBS did.
+if [[ "${development:-}" == "true" ]]; then
+    # Development/early testing bundle - leave quay.io pullspecs unchanged
+    echo "Development bundle: leaving quay.io pullspecs unchanged"
+elif [[ "${stage:-}" == "true" ]]; then
+    # Use stage pullspecs
+    sed -i -e "s|quay.io/redhat-user-workloads/api-management-tenant/rhcl-1-1-dns-operator|${DNS_OPERATOR_PULLSPEC_STAGE}|g" \
+        "${CSV_FILE}"
+else
+    # Use production pullspecs
+    sed -i -e "s|quay.io/redhat-user-workloads/api-management-tenant/rhcl-1-1-dns-operator|${DNS_OPERATOR_PULLSPEC}|g" \
+        "${CSV_FILE}"
+fi
+
 
 export EPOC_TIMESTAMP=$(date +%s)
 # time for some direct modifications to the csv
