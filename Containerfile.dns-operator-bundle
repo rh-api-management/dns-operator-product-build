@@ -34,15 +34,15 @@ LABEL operators.operatorframework.io.test.config.v1=tests/scorecard/
 
 # Core bundle labels.
 LABEL version="1.1.1" \
-    summary="Red Hat Connectivity Link enables you to secure, protect, and connect your APIs and applications in multicluster, multicloud, and hybrid cloud environments" \
+    summary="Configures how north-south traffic from outside the network is balanced and reaches Gateways." \
     name="dns-operator-bundle" \
-    description="Red Hat Connectivity Link enables you to secure, protect, and connect your APIs and applications in multicluster, multicloud, and hybrid cloud environments" \
+    description="Configures how north-south traffic from outside the network is balanced and reaches Gateways." \
     distribution-scope="public" \
-    release="0.0.1" \
+    release="1.1.1" \
     url="" \
     com.redhat.component="Red Hat DNS Operator Bundle" \
-    io.k8s.display-name="Red Hat Connectivity Link Operator metadata" \
-    io.k8s.description="Red Hat DNS Operator Bundle" \
+    io.k8s.display-name="Red Hat - DNS Operator" \
+    io.k8s.description="Configures how north-south traffic from outside the network is balanced and reaches Gateways." \
     io.openshift.expose-services="" \
     io.openshift.tags="api" \
     vendor="Red Hat, Inc."
