@@ -8,7 +8,7 @@ metadata:
     pipelinesascode.tekton.dev/cancel-in-progress: "false"
     pipelinesascode.tekton.dev/max-keep-runs: "3"
     pipelinesascode.tekton.dev/on-cel-expression: event == "push" && target_branch == "rhcl-1.1" && ( "bundle-hack/*".pathChanged() || "Containerfile.dns-operator-bundle-stage".pathChanged() || "downstream-conversion/*".pathChanged() || "rpms.lock.yaml".pathChanged() ||  "requirements-build.in".pathChanged() || "requirements-build.txt".pathChanged() || "config/*".pathChanged() || ".tekton/rhcl-1-1-dns-operator-bundle-stage-push.yaml".pathChanged() )
-  creationTimestamp:
+  creationTimestamp: null
   labels:
     appstudio.openshift.io/application: rhcl-1-1-dns-operator
     appstudio.openshift.io/component: rhcl-1-1-dns-operator-bundle-stage
