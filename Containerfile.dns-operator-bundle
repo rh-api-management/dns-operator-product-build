@@ -33,12 +33,12 @@ LABEL operators.operatorframework.io.test.mediatype.v1=scorecard+v1
 LABEL operators.operatorframework.io.test.config.v1=tests/scorecard/
 
 # Core bundle labels.
-LABEL version="1.1.1" \
+LABEL version="1.2.0" \
     summary="Configures how north-south traffic from outside the network is balanced and reaches Gateways." \
     name="dns-operator-bundle" \
     description="Configures how north-south traffic from outside the network is balanced and reaches Gateways." \
     distribution-scope="public" \
-    release="1.1.1" \
+    release="1.2.0" \
     url="" \
     com.redhat.component="Red Hat DNS Operator Bundle" \
     io.k8s.display-name="Red Hat - DNS Operator" \
