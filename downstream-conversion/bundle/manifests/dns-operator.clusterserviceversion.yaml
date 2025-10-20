@@ -64,7 +64,7 @@ metadata:
     operators.operatorframework.io/project_layout: go.kubebuilder.io/v4
     repository: https://github.com/kuadrant/dns-operator
     support: kuadrant
-  name: dns-operator.v0.0.0
+  name: dns-operator.v1.2.0
   namespace: placeholder
 spec:
   apiservicedefinitions: {}
