@@ -99,6 +99,14 @@ spec:
           - list
           - watch
         - apiGroups:
+          - ""
+          resources:
+          - namespaces
+          verbs:
+          - get
+          - list
+          - watch
+        - apiGroups:
           - kuadrant.io
           resources:
           - dnshealthcheckprobes
@@ -182,6 +190,13 @@ spec:
                 - /manager
                 env:
                 - name: WATCH_NAMESPACES
+                - name: CLUSTER_SECRET_NAMESPACE
+                  valueFrom:
+                    fieldRef:
+                      fieldPath: metadata.namespace
+                envFrom:
+                - configMapRef:
+                    name: dns-operator-controller-env
                 image: quay.io/redhat-user-workloads/api-management-tenant/rhcl-1-2-dns-operator@sha256:61e8a471cf20273fe879031eb302a1c7179b5423db4f0a8b9dccefae753ffdf4
                 livenessProbe:
                   httpGet:
