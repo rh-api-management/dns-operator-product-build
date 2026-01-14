@@ -34,18 +34,19 @@ LABEL operators.operatorframework.io.test.config.v1=tests/scorecard/
 
 # Core bundle labels.
 LABEL version="1.2.0" \
-    summary="Configures how north-south traffic from outside the network is balanced and reaches Gateways." \
-    name="dns-operator-bundle" \
-    description="Configures how north-south traffic from outside the network is balanced and reaches Gateways." \
-    distribution-scope="public" \
-    release="1.2.0" \
-    url="" \
-    com.redhat.component="Red Hat DNS Operator Bundle" \
-    io.k8s.display-name="Red Hat - DNS Operator" \
-    io.k8s.description="Red Hat DNS Operator Bundle" \
-    io.openshift.expose-services="" \
-    io.openshift.tags="api" \
-    vendor="Red Hat, Inc."
+      summary="Configures how north-south traffic from outside the network is balanced and reaches Gateways." \
+      name="rhcl-1/dns-operator-bundle" \
+      cpe="cpe:/a:redhat:connectivity_link:1::el9" \
+      description="Configures how north-south traffic from outside the network is balanced and reaches Gateways." \
+      distribution-scope="public" \
+      release="1.2.0" \
+      url="" \
+      com.redhat.component="Red Hat DNS Operator Bundle" \
+      io.k8s.display-name="Red Hat - DNS Operator" \
+      io.k8s.description="Red Hat DNS Operator Bundle" \
+      io.openshift.expose-services="" \
+      io.openshift.tags="api" \
+      vendor="Red Hat, Inc."
 
 # Copy files to locations specified by labels.
 COPY --from=builder /manifests /manifests/

@@ -34,18 +34,19 @@ LABEL operators.operatorframework.io.test.config.v1=tests/scorecard/
 
 # Core bundle labels.
 LABEL version="1.2.0" \
-    summary="Red Hat Connectivity Link enables you to secure, protect, and connect your APIs and applications in multicluster, multicloud, and hybrid cloud environments" \
-    name="dns-operator-bundle" \
-    description="Red Hat Connectivity Link enables you to secure, protect, and connect your APIs and applications in multicluster, multicloud, and hybrid cloud environments" \
-    distribution-scope="public" \
-    release="1.2.0" \
-    url="" \
-    com.redhat.component="Red Hat DNS Operator Bundle" \
-    io.k8s.display-name="Red Hat Connectivity Link Operator metadata" \
-    io.k8s.description="Red Hat DNS Operator Bundle" \
-    io.openshift.expose-services="" \
-    io.openshift.tags="api" \
-    vendor="Red Hat, Inc."
+      summary="Red Hat Connectivity Link enables you to secure, protect, and connect your APIs and applications in multicluster, multicloud, and hybrid cloud environments" \
+      name="rhcl-1/dns-operator-bundle" \
+      cpe="cpe:/a:redhat:connectivity_link:1::el9" \
+      description="Red Hat Connectivity Link enables you to secure, protect, and connect your APIs and applications in multicluster, multicloud, and hybrid cloud environments" \
+      distribution-scope="public" \
+      release="1.2.0" \
+      url="" \
+      com.redhat.component="Red Hat DNS Operator Bundle" \
+      io.k8s.display-name="Red Hat Connectivity Link Operator metadata" \
+      io.k8s.description="Red Hat DNS Operator Bundle" \
+      io.openshift.expose-services="" \
+      io.openshift.tags="api" \
+      vendor="Red Hat, Inc."
 
 # Copy files to locations specified by labels.
 COPY --from=builder /manifests /manifests/

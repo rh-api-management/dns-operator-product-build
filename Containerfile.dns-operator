@@ -46,17 +46,18 @@ FROM registry.redhat.io/ubi9/ubi-minimal@sha256:6fc28bcb6776e387d7a35a2056d9d2b9
 LABEL version="0.15.0" \
       summary="Red Hat DNS Operator Container Image" \
       description="Red Hat DNS Operator Container Image" \
-            name="dns-operator" \
-            com.redhat.component="Red Hat DNS Operator" \
-            io.k8s.display-name="Red Hat DNS Operator" \
-            io.k8s.description="Red Hat DNS Operator Container Image" \
-            io.openshift.expose-services="" \
-            io.openshift.tags="api" \
+      name="rhcl-1/dns-rhel9-operator" \
+      cpe="cpe:/a:redhat:connectivity_link:1::el9" \
+      com.redhat.component="Red Hat DNS Operator" \
+      io.k8s.display-name="Red Hat DNS Operator" \
+      io.k8s.description="Red Hat DNS Operator Container Image" \
+      io.openshift.expose-services="" \
+      io.openshift.tags="api" \
       vendor="Red Hat, Inc."
 
 ENV OPERATOR_BINARY_NAME="manager" \
-  USER_UID=1001 \
-  USER_NAME=connectivity-link-operator
+    USER_UID=1001 \
+    USER_NAME=connectivity-link-operator
 
 USER root
 
