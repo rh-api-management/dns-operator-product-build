@@ -92,9 +92,9 @@ for env in dev stage prod; do
     rm -rf "${output_dir}"
     mkdir -p "${manifests_dir}" "${metadata_dir}"
 
-    # Copy all manifests from upstream
+    # Copy manifests from upstream, but use local annotations.yaml
     cp "${UPSTREAM_BUNDLE}/manifests/"*.yaml "${manifests_dir}/"
-    cp "${UPSTREAM_BUNDLE}/metadata/"*.yaml "${metadata_dir}/"
+    cp "${SCRIPT_DIR}/annotations.yaml" "${metadata_dir}/"
 
     CSV_FILE="${manifests_dir}/dns-operator.clusterserviceversion.yaml"
 
