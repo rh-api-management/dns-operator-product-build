@@ -13,6 +13,7 @@ PROJECT_ROOT="${SCRIPT_DIR}/.."
 UPSTREAM_BUNDLE="${PROJECT_ROOT}/dns-operator/bundle"
 IMAGE_PULLSPECS="${PROJECT_ROOT}/image-pullspecs.yaml"
 DNS_CONFIG="${SCRIPT_DIR}/dns-operator.yaml"
+ANNOTATIONS_FILE="${SCRIPT_DIR}/annotations.yaml"
 
 # Check dependencies
 if ! command -v yq &> /dev/null; then
@@ -94,7 +95,7 @@ for env in dev stage prod; do
 
     # Copy manifests from upstream, but use local annotations.yaml
     cp "${UPSTREAM_BUNDLE}/manifests/"*.yaml "${manifests_dir}/"
-    cp "${SCRIPT_DIR}/annotations.yaml" "${metadata_dir}/"
+    cp "${ANNOTATIONS_FILE}" "${metadata_dir}/"
 
     CSV_FILE="${manifests_dir}/dns-operator.clusterserviceversion.yaml"
 
