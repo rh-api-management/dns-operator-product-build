@@ -23,6 +23,7 @@ RUN go mod download
 COPY ./dns-operator/cmd/main.go cmd/main.go
 COPY ./dns-operator/api/ api/
 COPY ./dns-operator/internal/ internal/
+COPY ./dns-operator/types/ types/
 
 COPY dns-operator/LICENSE /licenses/LICENSE
 
