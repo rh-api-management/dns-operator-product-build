@@ -1,0 +1,11 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+resources:
+  - ../../base
+
+# Dev: uses images from quay.io/redhat-user-workloads
+images:
+  - name: quay.io/kuadrant/coredns-kuadrant
+    newName: quay.io/redhat-user-workloads/api-management-tenant/rhcl-1-3-coredns
+    newTag: v1.3.0
