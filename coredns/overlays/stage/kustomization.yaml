@@ -1,0 +1,11 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+resources:
+  - ../../base
+
+# Stage: uses images from registry.stage.redhat.io
+images:
+  - name: quay.io/kuadrant/coredns-kuadrant
+    newName: registry.stage.redhat.io/rhcl-1/coredns-rhel9
+    digest: sha256:c2e49ae0c68c322450324c38c5386163bf86b490d2361abeb09b6c38167a7618

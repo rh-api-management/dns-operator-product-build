@@ -35,3 +35,4 @@ LABEL version="1.3.0" \
 COPY bundle-dev/manifests /manifests/
 COPY bundle-dev/metadata /metadata/
 COPY dns-operator/bundle/tests/scorecard /tests/scorecard/
+COPY coredns/manifests/dev/ /coredns/

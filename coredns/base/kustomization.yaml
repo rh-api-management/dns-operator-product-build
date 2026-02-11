@@ -1,0 +1,50 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+resources:
+  - ../../dns-operator/config/coredns-unmonitored
+
+# Override Corefile with minimal configuration
+configMapGenerator:
+  - name: kuadrant-coredns
+    namespace: kuadrant-coredns
+    behavior: replace
+    files:
+      - Corefile
+    options:
+      disableNameSuffixHash: true
+      labels:
+        app.kubernetes.io/name: coredns
+        app.kubernetes.io/instance: rhcl
+        app.kubernetes.io/version: rhcl-1.3
+
+# Set instance and version labels
+labels:
+  - pairs:
+      app.kubernetes.io/instance: rhcl
+      app.kubernetes.io/version: rhcl-1.3
+    includeSelectors: true
+    includeTemplates: true
+
+# Remove Helm-related labels from resources and set security context
+patches:
+  - target:
+      kind: Deployment
+      name: kuadrant-coredns
+    patch: |-
+      - op: add
+        path: /spec/template/spec/securityContext
+        value:
+          runAsNonRoot: true
+  # Remove app.kubernetes.io/managed-by from metadata.labels
+  - target:
+      labelSelector: "app.kubernetes.io/managed-by=Helm"
+    patch: |-
+      - op: remove
+        path: /metadata/labels/app.kubernetes.io~1managed-by
+  # Remove helm.sh/chart from metadata.labels
+  - target:
+      labelSelector: "helm.sh/chart"
+    patch: |-
+      - op: remove
+        path: /metadata/labels/helm.sh~1chart
