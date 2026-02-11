@@ -160,7 +160,7 @@ spec:
         env:
         - name: WATCH_NAMESPACES
           value: ""
-        image: quay.io/redhat-user-workloads/api-management-tenant/rhcl-1-3-coredns:v1.3.0
+        image: image-rbac-proxy.apps.stone-prd-rh01.pg1f.p1.openshiftapps.com/redhat-user-workloads/api-management-tenant/rhcl-1-3-coredns@sha256:c2e49ae0c68c322450324c38c5386163bf86b490d2361abeb09b6c38167a7618
         imagePullPolicy: Always
         livenessProbe:
           failureThreshold: 5
@@ -211,6 +211,8 @@ spec:
         volumeMounts:
         - mountPath: /etc/coredns
           name: config-volume
+      securityContext:
+        runAsNonRoot: true
       serviceAccountName: default
       terminationGracePeriodSeconds: 30
       volumes:

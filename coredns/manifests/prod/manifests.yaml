@@ -211,6 +211,8 @@ spec:
         volumeMounts:
         - mountPath: /etc/coredns
           name: config-volume
+      securityContext:
+        runAsNonRoot: true
       serviceAccountName: default
       terminationGracePeriodSeconds: 30
       volumes:

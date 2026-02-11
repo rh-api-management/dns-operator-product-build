@@ -26,8 +26,16 @@ labels:
     includeSelectors: true
     includeTemplates: true
 
-# Remove Helm-related labels from resources
+# Remove Helm-related labels from resources and set security context
 patches:
+  - target:
+      kind: Deployment
+      name: kuadrant-coredns
+    patch: |-
+      - op: add
+        path: /spec/template/spec/securityContext
+        value:
+          runAsNonRoot: true
   # Remove app.kubernetes.io/managed-by from metadata.labels
   - target:
       labelSelector: "app.kubernetes.io/managed-by=Helm"
