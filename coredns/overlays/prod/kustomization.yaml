@@ -8,4 +8,4 @@ resources:
 images:
   - name: quay.io/kuadrant/coredns-kuadrant
     newName: registry.redhat.io/rhcl-1/coredns-rhel9
-    newTag: v1.3.0
+    digest: sha256:c2e49ae0c68c322450324c38c5386163bf86b490d2361abeb09b6c38167a7618
