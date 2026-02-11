@@ -160,7 +160,7 @@ spec:
         env:
         - name: WATCH_NAMESPACES
           value: ""
-        image: quay.io/redhat-user-workloads/api-management-tenant/rhcl-1-3-coredns:v1.3.0
+        image: image-rbac-proxy.apps.stone-prd-rh01.pg1f.p1.openshiftapps.com/redhat-user-workloads/api-management-tenant/rhcl-1-3-coredns@sha256:9ab83ba35e0b74569b76e689c790213515607b8a999e03a5461f9a5783c7cfc1
         imagePullPolicy: Always
         livenessProbe:
           failureThreshold: 5
