@@ -58,7 +58,7 @@ metadata:
       ]
     capabilities: Basic Install
     categories: Integration & Delivery
-    containerImage: image-rbac-proxy.apps.stone-prd-rh01.pg1f.p1.openshiftapps.com/redhat-user-workloads/api-management-tenant/rhcl-1-3-dns-operator@sha256:bceb93c7542628cb23dcaa1cbb95123827634922e34f6c2d8f0543c8ca399fd9
+    containerImage: image-rbac-proxy.apps.stone-prd-rh01.pg1f.p1.openshiftapps.com/redhat-user-workloads/api-management-tenant/rhcl-1-3-dns-operator@sha256:36a1a483a361a54674465916a5850c4da3ace4897999a218f1a07617aafaba20
     createdAt: "2026-02-05T12:07:43Z"
     description: A Kubernetes Operator to manage the lifecycle of DNS resources
     operators.operatorframework.io/builder: operator-sdk-v1.33.0
@@ -182,7 +182,7 @@ spec:
                     envFrom:
                       - configMapRef:
                           name: dns-operator-controller-env
-                    image: image-rbac-proxy.apps.stone-prd-rh01.pg1f.p1.openshiftapps.com/redhat-user-workloads/api-management-tenant/rhcl-1-3-dns-operator@sha256:bceb93c7542628cb23dcaa1cbb95123827634922e34f6c2d8f0543c8ca399fd9
+                    image: image-rbac-proxy.apps.stone-prd-rh01.pg1f.p1.openshiftapps.com/redhat-user-workloads/api-management-tenant/rhcl-1-3-dns-operator@sha256:36a1a483a361a54674465916a5850c4da3ace4897999a218f1a07617aafaba20
                     livenessProbe:
                       httpGet:
                         path: /healthz
