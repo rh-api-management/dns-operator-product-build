@@ -84,7 +84,6 @@ metadata:
   name: kuadrant-coredns
   namespace: kuadrant-coredns
 spec:
-  externalTrafficPolicy: Local
   ports:
   - name: udp-53
     port: 53
