@@ -73,6 +73,8 @@ spec:
         - $(params.build-platforms)
     name: build-images
     params:
+    - name: BUILDAH_FORMAT
+      value: $(params.buildah-format)
     - name: IMAGE
       value: $(params.output-image)
     - name: DOCKERFILE
@@ -111,6 +113,8 @@ spec:
       resolver: bundles
   - name: build-image-index
     params:
+    - name: BUILDAH_FORMAT
+      value: $(params.buildah-format)
     - name: IMAGE
       value: $(params.output-image)
     - name: COMMIT_SHA
