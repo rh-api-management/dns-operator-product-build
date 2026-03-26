@@ -1,4 +1,4 @@
 # Image pullspecs for DNS Operator bundle
 # This file is updated automatically by Konflux
 images:
-  operator: image-rbac-proxy.apps.stone-prd-rh01.pg1f.p1.openshiftapps.com/redhat-user-workloads/api-management-tenant/rhcl-1-3-dns-operator@sha256:b4e7ba67509320ca9ac5d63cc4add987fad05b098c4a7cd8dd91f264731177cf
+  operator: quay.io/redhat-user-workloads/api-management-tenant/rhcl-1-3-dns-operator@sha256:b4e7ba67509320ca9ac5d63cc4add987fad05b098c4a7cd8dd91f264731177cf
