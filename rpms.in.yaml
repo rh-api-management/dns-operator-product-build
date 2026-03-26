@@ -1,9 +1,0 @@
-contentOrigin:
-  repofiles:
-    - ./ubi.repo
-    - ./redhat.repo
-context:
-  image: registry.redhat.io/ubi9/ubi:latest
-packages:
-  - jq
-  - skopeo
