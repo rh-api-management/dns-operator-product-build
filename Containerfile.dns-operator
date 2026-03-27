@@ -32,7 +32,7 @@ RUN CGO_ENABLED=0 GOOS=${TARGETOS:-linux} GOARCH=${TARGETARCH} go build -ldflags
 
 FROM registry.redhat.io/ubi9/ubi-minimal@sha256:83006d535923fcf1345067873524a3980316f51794f01d8655be55d6e9387183
 
-LABEL version="0.16.0" \
+LABEL version="0.16.1" \
       summary="Red Hat DNS Operator Container Image" \
       description="Red Hat DNS Operator Container Image" \
       name="rhcl-1/dns-rhel9-operator" \
