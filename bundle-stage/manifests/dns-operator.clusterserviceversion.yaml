@@ -59,7 +59,7 @@ metadata:
     capabilities: Basic Install
     categories: Integration & Delivery
     containerImage: registry.stage.redhat.io/rhcl-1/dns-rhel9-operator@sha256:c555c210c8d6f0512f446d18f44269677594cf7ff62f29903914f13413de7007
-    createdAt: "2026-02-05T12:07:43Z"
+    createdAt: "2026-05-20T15:22:37Z"
     description: A Kubernetes Operator to manage the lifecycle of DNS resources
     operators.operatorframework.io/builder: operator-sdk-v1.33.0
     operators.operatorframework.io/project_layout: go.kubebuilder.io/v4
