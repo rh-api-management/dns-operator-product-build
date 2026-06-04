@@ -7,5 +7,5 @@ resources:
 # Dev: uses images from quay.io/redhat-user-workloads
 images:
   - name: quay.io/kuadrant/coredns-kuadrant
-    newName: image-rbac-proxy.apps.stone-prd-rh01.pg1f.p1.openshiftapps.com/redhat-user-workloads/api-management-tenant/rhcl-1-3-coredns
+    newName: image-rbac-proxy.apps.stone-prd-rh01.pg1f.p1.openshiftapps.com/redhat-user-workloads/api-management-tenant/rhcl-1-4-coredns
     digest: sha256:5f48f593db165fb6c90116251a5052de719f644c2ba432db0e94eb515c08c790
