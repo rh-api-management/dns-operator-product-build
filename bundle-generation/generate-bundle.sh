@@ -144,6 +144,15 @@ for env in dev stage prod; do
     yq -i '.metadata.annotations.repository = "'"${REPO_URL}"'"' "${CSV_FILE}"
     yq -i '(.spec.links[] | select(.name == "DNS Operator") | .url) = "'"${DOC_URL}"'"' "${CSV_FILE}"
 
+    # Update CSV: Append additional RBAC cluster permissions from config
+    ADDITIONAL_RULES_COUNT=$(yq '.additionalClusterPermissions | length' "$DNS_CONFIG")
+    if [[ "$ADDITIONAL_RULES_COUNT" -gt 0 ]]; then
+        for ((i=0; i<ADDITIONAL_RULES_COUNT; i++)); do
+            yq -i '.spec.install.spec.clusterPermissions[0].rules += [load("'"$DNS_CONFIG"'").additionalClusterPermissions['"$i"']]' "${CSV_FILE}"
+        done
+        echo "  Added ${ADDITIONAL_RULES_COUNT} additional RBAC rule(s)"
+    fi
+
     # Update CSV: Remove replaces and skipRange (managed in catalog repo)
     yq -i 'del(.spec.replaces)' "${CSV_FILE}"
     yq -i 'del(.spec.skipRange)' "${CSV_FILE}"

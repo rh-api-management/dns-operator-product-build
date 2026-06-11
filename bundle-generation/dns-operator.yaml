@@ -55,6 +55,17 @@ registries:
   prod:
     operator: registry.redhat.io/rhcl-1/dns-rhel9-operator
 
+# Additional RBAC cluster permissions to append to the CSV
+additionalClusterPermissions:
+  - apiGroups:
+      - networking.k8s.io
+    resources:
+      - networkpolicies
+    verbs:
+      - create
+      - delete
+      - update
+
 # Output directory mapping
 outputDirs:
   dev: bundle-dev
