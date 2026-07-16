@@ -4,8 +4,8 @@
 
 # CSV metadata
 csv:
-  name: dns-operator.v1.4.0
-  version: "1.4.0"
+  name: dns-operator.v1.4.1
+  version: "1.4.1"
   displayName: DNS Operator
   description: "Configures how north-south traffic from outside the network is balanced and reaches Gateways."
   icon:
