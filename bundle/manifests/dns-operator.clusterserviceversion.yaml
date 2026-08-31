@@ -59,7 +59,7 @@ metadata:
     capabilities: Basic Install
     categories: Integration & Delivery
     containerImage: registry.redhat.io/rhcl-1/dns-rhel9-operator@sha256:3494c511064227b9763551bbb4550ea499d1740702ca293b674a16172adb1ba9
-    createdAt: "2026-07-15T08:28:11Z"
+    createdAt: "2026-08-31T08:02:43Z"
     description: A Kubernetes Operator to manage the lifecycle of DNS resources
     operators.operatorframework.io/builder: operator-sdk-v1.33.0
     operators.operatorframework.io/project_layout: go.kubebuilder.io/v4
@@ -76,7 +76,7 @@ metadata:
     features.operators.openshift.io/cni: "false"
     features.operators.openshift.io/csi: "false"
     operators.openshift.io/valid-subscription: '["Red Hat Connectivity Link"]'
-  name: dns-operator.v1.4.1
+  name: dns-operator.v1.4.2
   namespace: placeholder
   labels:
     operatorframework.io/os.linux: supported
@@ -280,4 +280,4 @@ spec:
   minKubeVersion: 1.8.0
   provider:
     name: Red Hat
-  version: 1.4.1
+  version: 1.4.2
