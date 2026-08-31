@@ -32,7 +32,7 @@ RUN CGO_ENABLED=1 GOEXPERIMENT=strictfipsruntime GOOS=${TARGETOS:-linux} GOARCH=
 
 FROM registry.redhat.io/ubi9/ubi-minimal:latest
 
-LABEL version="0.17.1" \
+LABEL version="0.17.2" \
       summary="Red Hat DNS Operator Container Image" \
       description="Red Hat DNS Operator Container Image" \
       name="rhcl-1/dns-rhel9-operator" \
