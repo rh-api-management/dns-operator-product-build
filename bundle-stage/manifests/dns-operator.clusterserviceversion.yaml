@@ -58,7 +58,7 @@ metadata:
       ]
     capabilities: Basic Install
     categories: Integration & Delivery
-    containerImage: registry.stage.redhat.io/rhcl-1/dns-rhel9-operator@sha256:1cee71c721d4ced752ab52b94554418125f3be68bbd811b203d5dc4cf931934d
+    containerImage: registry.stage.redhat.io/rhcl-1/dns-rhel9-operator@sha256:37a30f77542c56a898c0919cf05fb2aa26d023a57801a60e6c2fea6625727e5e
     createdAt: "2026-07-23T14:50:37Z"
     description: A Kubernetes Operator to manage the lifecycle of DNS resources
     operators.operatorframework.io/builder: operator-sdk-v1.33.0
@@ -182,7 +182,7 @@ spec:
                     envFrom:
                       - configMapRef:
                           name: dns-operator-controller-env
-                    image: registry.stage.redhat.io/rhcl-1/dns-rhel9-operator@sha256:1cee71c721d4ced752ab52b94554418125f3be68bbd811b203d5dc4cf931934d
+                    image: registry.stage.redhat.io/rhcl-1/dns-rhel9-operator@sha256:37a30f77542c56a898c0919cf05fb2aa26d023a57801a60e6c2fea6625727e5e
                     livenessProbe:
                       httpGet:
                         path: /healthz
