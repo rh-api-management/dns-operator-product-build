@@ -159,7 +159,7 @@ spec:
         env:
         - name: WATCH_NAMESPACES
           value: ""
-        image: registry.redhat.io/rhcl-1/coredns-rhel9@sha256:e3a14014a075e9bc3fb15125b417cea8fefa20e7f799085351b7996b0b1cf698 
+        image: registry.redhat.io/rhcl-1/coredns-rhel9@sha256:7be7f222b28a93f7819642eb401670bf0f6601047bce0b184cc9d0a245299509
         imagePullPolicy: Always
         livenessProbe:
           failureThreshold: 5
