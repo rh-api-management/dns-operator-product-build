@@ -41,7 +41,7 @@ COPY dns-operator/LICENSE /licenses/LICENSE
 # Build
 RUN CGO_ENABLED=0 GOOS=${TARGETOS:-linux} GOARCH=${TARGETARCH} go build -ldflags "-X main.version=${VERSION} -X main.gitSHA=${GIT_SHA} -X main.dirty=${DIRTY}" -a -o ${BINARY_NAME} cmd/main.go
 
-FROM registry.redhat.io/ubi9/ubi-minimal@sha256:6fc28bcb6776e387d7a35a2056d9d2b985dc4e26031e98a2bd35a7137cd6fd71
+FROM registry.redhat.io/ubi9/ubi-minimal@sha256:7fbeae18dc9476399f565e68255f602a3374ea8614ba3d14843565131a13ff93
 
 LABEL version="0.14.0" \
       summary="Red Hat DNS Operator Container Image" \
