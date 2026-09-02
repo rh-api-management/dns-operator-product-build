@@ -6,7 +6,7 @@ spec:
   imageDigestMirrors:
     - source: registry.redhat.io/rhcl-1/dns-rhel9-operator
       mirrors:
-        - quay.io/redhat-user-workloads/api-management-tenant/rhcl-1-4-dns-operator
+        - quay.io/redhat-user-workloads/api-management-tenant/rhcl-1-5-dns-operator
     - source: registry.stage.redhat.io/rhcl-1/dns-rhel9-operator
       mirrors:
-        - quay.io/redhat-user-workloads/api-management-tenant/rhcl-1-4-dns-operator
+        - quay.io/redhat-user-workloads/api-management-tenant/rhcl-1-5-dns-operator
