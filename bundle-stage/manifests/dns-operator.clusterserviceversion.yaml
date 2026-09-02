@@ -76,7 +76,7 @@ metadata:
     features.operators.openshift.io/cni: "false"
     features.operators.openshift.io/csi: "false"
     operators.openshift.io/valid-subscription: '["Red Hat Connectivity Link"]'
-  name: dns-operator.v1.4.2
+  name: dns-operator.v1.5.0
   namespace: placeholder
   labels:
     operatorframework.io/os.linux: supported
@@ -280,4 +280,4 @@ spec:
   minKubeVersion: 1.8.0
   provider:
     name: Red Hat
-  version: 1.4.2
+  version: 1.5.0
