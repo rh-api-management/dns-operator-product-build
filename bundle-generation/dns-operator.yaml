@@ -60,3 +60,18 @@ outputDirs:
   dev: bundle-dev
   stage: bundle-stage
   prod: bundle
+
+# Additional clusterPermission rules to append to the CSV
+# These are RHCL-specific RBAC rules not present in the upstream bundle
+additionalClusterPermissionRules:
+  - apiGroups:
+      - networking.k8s.io
+    resources:
+      - networkpolicies
+    verbs:
+      - get
+      - list
+      - watch
+      - create
+      - delete
+      - update
