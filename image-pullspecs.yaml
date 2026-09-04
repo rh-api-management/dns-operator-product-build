@@ -1,4 +1,4 @@
 # Image pullspecs for DNS Operator bundle
 # This file is updated automatically by Konflux
 images:
-  operator: quay.io/redhat-user-workloads/api-management-tenant/rhcl-1-2-dns-operator@sha256:e9792da4ceb95dd631336c2d4ab36c67af60a7a2faf0400570b63aa4a4c2c633
+  operator: quay.io/redhat-user-workloads/api-management-tenant/rhcl-1-2-dns-operator@sha256:b346a257e6b597d7a79d961b566d170f0aa84143a0caf8648708f282319be917
