@@ -159,7 +159,7 @@ spec:
         env:
         - name: WATCH_NAMESPACES
           value: ""
-        image: image-rbac-proxy.apps.stone-prd-rh01.pg1f.p1.openshiftapps.com/redhat-user-workloads/api-management-tenant/rhcl-1-4-coredns@sha256:f667a314e0ef54a0c5c95e4d28e108b75721c9d3618de91a92626df5539dfef2
+        image: image-rbac-proxy.apps.stone-prd-rh01.pg1f.p1.openshiftapps.com/redhat-user-workloads/api-management-tenant/rhcl-1-4-coredns@sha256:c70eabaffa2c87b565765b04a00c978ae9c1032ff41b4da983f2c5785ecadd61
         imagePullPolicy: Always
         livenessProbe:
           failureThreshold: 5
