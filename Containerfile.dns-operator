@@ -34,7 +34,7 @@ RUN CGO_ENABLED=1 GOEXPERIMENT=strictfipsruntime GOOS=${TARGETOS:-linux} GOARCH=
 # crypto policy set to DEFAULT:PQ (CONNLINK-1566).
 FROM registry.redhat.io/ubi9/ubi-minimal-pqc:latest
 
-LABEL version="0.18.0" \
+LABEL version="0.18.1" \
       summary="Red Hat DNS Operator Container Image" \
       description="Red Hat DNS Operator Container Image" \
       name="rhcl-1/dns-rhel9-operator" \
